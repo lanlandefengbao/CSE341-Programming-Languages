@@ -1,0 +1,14 @@
+
+fun null xs =
+    let
+	val x = hd xs
+    in
+	fn x => false
+    end
+	
+
+fun append xs ys =
+    if xs = []
+    then ys
+    else
+	(hd xs)::(append (tl xs) ys)
